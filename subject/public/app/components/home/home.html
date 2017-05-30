@@ -1,0 +1,30 @@
+<div class="container">
+    <h4>Emails par utilisateurs avec descriptif</h4>
+    <p>
+
+    </p>
+    <hr>
+    <div class="row">
+        <div class="s12">
+            <!-- besoin de boucler ! -->
+            <div ng-repeat="user in users">
+                <div><i class="material-icons">person</i>{{user.name.first}} {{user.name.last}}</div>
+                <div><i class="material-icons">work</i>{{user.company}}</div>
+                <div><i class="material-icons">email</i>{{user.email}}</div>
+                <div><i class="material-icons">phone</i>{{user.phone}}</div>
+                <div>
+                    <h5>Notes</h5>
+                    <div>
+                        <div>
+                            <div><span>#1</span></div>
+                            <p>{{note({id:user._id})}}</p>
+                        </div>
+                        <div>
+                            ...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
